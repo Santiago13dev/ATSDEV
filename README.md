@@ -1,6 +1,6 @@
 # 🔍 Detector de Formato ATS
 
-Un MVP (Minimum Viable Product) para detectar si una hoja de vida cumple con los requisitos de formato ATS (Applicant Tracking System).
+Un MVP para detectar si una hoja de vida cumple con los requisitos de formato ATS (Applicant Tracking System).
 
 ## 🎯 Características
 
@@ -82,16 +82,6 @@ open index.html
 - [ ] Soporte para más formatos (RTF, TXT)
 - [ ] Análisis de densidad de palabras clave
 - [ ] Integración con APIs de empleos
-
-## 🤝 Contribuir
-
-¡Las contribuciones son bienvenidas! Por favor:
-
-1. Fork el proyecto
-2. Crea una branch para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la branch (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
 
 ## 📄 Licencia
 
