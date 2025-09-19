@@ -1,3 +1,4 @@
+/* La clase ATSDetector está diseñada para analizar y evaluar la compatibilidad de un currículum (CV) con los sistemas de seguimiento de candidatos (ATS) según diversos criterios, como el formato del archivo, la información de contacto, la estructura, las palabras clave, las fechas, los elementos problemáticos y la longitud del texto. */
 class ATSDetector {
     constructor() {
         this.initializeEventListeners();
