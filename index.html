@@ -1,17 +1,80 @@
-<!-- pie de página para mi proyecto de analizar HJ en ATS -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detector de Formato ATS</title>
+    <title>ATS Checker - Sistema Profesional de Análisis de CV</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
 </head>
 <body>
+    <!-- Modal de Login/Registro -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Iniciar Sesión</button>
+                    <button class="tab-btn" data-tab="register">Registrarse</button>
+                </div>
+                
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form active">
+                    <h2>Bienvenido de vuelta</h2>
+                    <div class="form-group">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Recordarme</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="auth-btn">Iniciar Sesión</button>
+                    <p class="forgot-password">
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </p>
+                </form>
+                
+                <!-- Register Form -->
+                <form id="registerForm" class="auth-form">
+                    <h2>Crea tu cuenta</h2>
+                    <div class="form-group">
+                        <input type="text" id="registerName" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="registerEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" placeholder="Confirmar contraseña" required>
+                    </div>
+                    <button type="submit" class="auth-btn">Crear cuenta</button>
+                    <p class="terms">
+                        Al registrarte, aceptas nuestros <a href="#">términos y condiciones</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Profile Section -->
+    <div class="user-profile" id="userProfile" style="display: none;">
+        <img src="https://ui-avatars.com/api/?name=User&background=667eea&color=fff" alt="Avatar" class="user-avatar">
+        <span class="user-name">Usuario</span>
+        <button class="logout-btn" id="logoutBtn">Cerrar sesión</button>
+    </div>
+
     <div class="container">
         <header>
             <h1>🔍 Detector de Formato ATS</h1>
             <p>Verifica si tu hoja de vida es compatible con sistemas ATS</p>
+            <button id="loginBtn" class="header-login-btn">Iniciar Sesión</button>
         </header>
 
         <main>
@@ -57,6 +120,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="auth.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
