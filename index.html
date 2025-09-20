@@ -3,34 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ feature/data-visualization
     <title>Detector de Formato ATS - Análisis Profesional de CV</title>
+
+ enhance/color-scheme
+    <title>Detector de Formato ATS - Optimiza tu CV</title>
+    main
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="darkmode.css">
+
+    <meta name="description" content="Herramienta gratuita para verificar si tu CV es compatible con sistemas ATS">
+    <title>ATS Checker - Optimiza tu CV para sistemas de seguimiento</title>
+    <link rel="stylesheet" href="style.css">
+ feature/responsive-improvements
+    <link rel="stylesheet" href="responsive.css">
+
+ fix/improve-ux-feedback
+    <link rel="stylesheet" href="toast.css">
+    <link rel="stylesheet" href="animations.css">
+   <main>
+ main
+ main
 </head>
 <body>
+    <div class="toast-container" id="toastContainer"></div>
+    
     <div class="container">
-        <header>
+        <header class="animate-slideup">
             <h1>🔍 Detector de Formato ATS</h1>
             <p>Verifica si tu hoja de vida es compatible con sistemas ATS</p>
         </header>
 
         <main>
-            <div class="upload-section">
-                <div class="upload-area" id="uploadArea">
+            <section class="upload-section" aria-label="Área de carga de archivos">
+                <div class="upload-area" id="uploadArea" role="button" tabindex="0">
                     <div class="upload-content">
-                        <div class="upload-icon">📄</div>
+                        <div class="upload-icon" aria-hidden="true">📄</div>
                         <h3>Arrastra tu CV aquí o haz clic para seleccionar</h3>
                         <p>Formatos soportados: PDF, DOCX</p>
-                        <input type="file" id="fileInput" accept=".pdf,.docx" hidden>
+                        <input type="file" id="fileInput" accept=".pdf,.docx" hidden aria-label="Seleccionar archivo CV">
                         <button type="button" onclick="document.getElementById('fileInput').click()" class="upload-btn">
                             Seleccionar archivo
                         </button>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="results-section" id="resultsSection" style="display: none;">
+            <section class="results-section" id="resultsSection" style="display: none;" aria-live="polite">
                 <div class="score-card">
-                    <div class="score-circle" id="scoreCircle">
+                    <div class="score-circle" id="scoreCircle" role="img" aria-label="Puntuación de compatibilidad">
                         <span id="scoreValue">0</span>
                         <small>/ 100</small>
                     </div>
@@ -51,14 +72,14 @@
 
                 <div class="analysis-results">
                     <h3>📊 Análisis detallado</h3>
-                    <div id="analysisResults"></div>
+                    <div id="analysisResults" role="list"></div>
                 </div>
 
                 <div class="recommendations">
                     <h3>💡 Recomendaciones</h3>
-                    <div id="recommendationsList"></div>
+                    <div id="recommendationsList" role="list"></div>
                 </div>
-            </div>
+            </section>
         </main>
 
         <footer>
@@ -66,7 +87,11 @@
         </footer>
     </div>
 
+ feature/data-visualization
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="theme.js"></script>
+ main
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     <script src="charts.js"></script>
