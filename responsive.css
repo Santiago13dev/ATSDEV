@@ -1,0 +1,132 @@
+/* Responsive improvements */
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  main {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  header {
+    margin-bottom: 30px;
+    padding-top: 20px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+  
+  .upload-area {
+    padding: 25px 15px;
+  }
+  
+  .upload-icon {
+    font-size: 2.5rem;
+  }
+  
+  .upload-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .upload-content p {
+    font-size: 0.9rem;
+  }
+  
+  .score-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .score-circle::before {
+    width: 75px;
+    height: 75px;
+  }
+  
+  #scoreValue {
+    font-size: 1.5rem;
+  }
+  
+  .check-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .check-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .recommendation-item {
+    padding: 12px;
+  }
+  
+  .recommendation-item h4 {
+    font-size: 1rem;
+  }
+  
+  .recommendation-item p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  header p {
+    font-size: 0.9rem;
+  }
+  
+  .upload-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .analysis-results h3,
+  .recommendations h3 {
+    font-size: 1.1rem;
+  }
+  
+  footer {
+    font-size: 0.85rem;
+  }
+}
+
+/* Landscape orientation improvements */
+@media (orientation: landscape) and (max-height: 600px) {
+  header {
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .upload-area {
+    padding: 20px;
+  }
+  
+  main {
+    padding: 25px;
+  }
+}
