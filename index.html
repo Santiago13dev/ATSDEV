@@ -1,10 +1,9 @@
-<!-- pie de página para mi proyecto de analizar HJ en ATS -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detector de Formato ATS</title>
+    <title>Detector de Formato ATS - Análisis Profesional de CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,6 +37,18 @@
                     <h3 id="scoreStatus">Procesando...</h3>
                 </div>
 
+                <!-- Nueva sección de gráficos -->
+                <div class="charts-section">
+                    <div class="chart-container">
+                        <h3>📈 Análisis por Categorías</h3>
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>📊 Progreso de Optimización</h3>
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+
                 <div class="analysis-results">
                     <h3>📊 Análisis detallado</h3>
                     <div id="analysisResults"></div>
@@ -55,8 +66,10 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="charts.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
