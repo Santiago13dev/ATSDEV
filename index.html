@@ -1,10 +1,10 @@
-<!-- pie de página para mi proyecto de analizar HJ en ATS -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detector de Formato ATS</title>
+    <meta name="description" content="Herramienta gratuita para verificar si tu CV es compatible con sistemas ATS">
+    <title>ATS Checker - Optimiza tu CV para sistemas de seguimiento</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,23 +15,23 @@
         </header>
 
         <main>
-            <div class="upload-section">
-                <div class="upload-area" id="uploadArea">
+            <section class="upload-section" aria-label="Área de carga de archivos">
+                <div class="upload-area" id="uploadArea" role="button" tabindex="0">
                     <div class="upload-content">
-                        <div class="upload-icon">📄</div>
+                        <div class="upload-icon" aria-hidden="true">📄</div>
                         <h3>Arrastra tu CV aquí o haz clic para seleccionar</h3>
                         <p>Formatos soportados: PDF, DOCX</p>
-                        <input type="file" id="fileInput" accept=".pdf,.docx" hidden>
+                        <input type="file" id="fileInput" accept=".pdf,.docx" hidden aria-label="Seleccionar archivo CV">
                         <button type="button" onclick="document.getElementById('fileInput').click()" class="upload-btn">
                             Seleccionar archivo
                         </button>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="results-section" id="resultsSection" style="display: none;">
+            <section class="results-section" id="resultsSection" style="display: none;" aria-live="polite">
                 <div class="score-card">
-                    <div class="score-circle" id="scoreCircle">
+                    <div class="score-circle" id="scoreCircle" role="img" aria-label="Puntuación de compatibilidad">
                         <span id="scoreValue">0</span>
                         <small>/ 100</small>
                     </div>
@@ -40,14 +40,14 @@
 
                 <div class="analysis-results">
                     <h3>📊 Análisis detallado</h3>
-                    <div id="analysisResults"></div>
+                    <div id="analysisResults" role="list"></div>
                 </div>
 
                 <div class="recommendations">
                     <h3>💡 Recomendaciones</h3>
-                    <div id="recommendationsList"></div>
+                    <div id="recommendationsList" role="list"></div>
                 </div>
-            </div>
+            </section>
         </main>
 
         <footer>
