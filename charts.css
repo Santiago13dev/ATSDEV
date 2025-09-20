@@ -1,0 +1,161 @@
+/* Chart visualization styles */
+.charts-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+}
+
+.chart-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    min-height: 300px;
+}
+
+.chart-container h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.chart-container canvas {
+    max-height: 250px;
+}
+
+/* Progress bars for visual enhancement */
+.progress-bars {
+    margin: 20px 0;
+}
+
+.progress-item {
+    margin-bottom: 20px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.progress-bar-bg {
+    background: #e0e0e0;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.progress-bar-fill.success {
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+}
+
+.progress-bar-fill.warning {
+    background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
+}
+
+.progress-bar-fill.danger {
+    background: linear-gradient(90deg, #dc3545 0%, #c82333 100%);
+}
+
+/* Export button styles */
+.export-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.export-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.export-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.export-btn.secondary {
+    background: linear-gradient(45deg, #6c757d, #495057);
+}
+
+/* Responsive design for charts */
+@media (max-width: 768px) {
+    .charts-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .chart-container {
+        min-height: 250px;
+    }
+}
+
+/* Animation for data loading */
+.chart-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    color: #666;
+}
+
+.chart-loading::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
